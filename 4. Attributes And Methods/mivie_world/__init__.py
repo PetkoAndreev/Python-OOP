@@ -21,3 +21,14 @@ print(movie_world.rent_dvd(2, 1))
 print(movie_world.rent_dvd(1, 2))
 
 print(movie_world)
+
+'''
+Output
+John should be at least 18 to rent this movie
+Anna has successfully rented Black Widow
+John has successfully rented The Croods 2
+1: John of age 16 has 1 rented DVD's (The Croods 2)
+2: Anna of age 55 has 1 rented DVD's (Black Widow)
+1: Black Widow (April 2020) has age restriction 18. Status: rented
+2: The Croods 2 (December 2020) has age restriction 3. Status: rented
+'''
