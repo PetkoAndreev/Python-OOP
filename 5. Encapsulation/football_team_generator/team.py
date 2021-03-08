@@ -5,35 +5,29 @@ class Team:
         self.__rating = rating
         self.__players = []
 
-    def get_name(self):
-        return self.__name
-
     @property
     def name(self):
         return self.__name
 
-    def set_name(self, name):
-        self.__name = name
-
-    def get_rating(self):
-        return self.__rating
+    @name.setter
+    def name(self, value):
+        self.__name = value
 
     @property
     def rating(self):
         return self.__rating
 
-    def set_rating(self, rating):
-        self.__rating = rating
-
-    def get_players(self):
-        return self.__players
+    @rating.setter
+    def rating(self, value):
+        self.__rating = value
 
     @property
     def players(self):
         return self.__players
 
-    def set_players(self, players):
-        self.__players = players
+    @players.setter
+    def players(self, value):
+        self.__players = value
 
     def add_player(self, player):
         '''
@@ -42,9 +36,9 @@ class Team:
         •	Add the player to the team and return "Player {name} joined team {team_name}"
         '''
         if player in self.__players:
-            return f"Player {player.get_name()} has already joined"
+            return f"Player {player.name} has already joined"
         self.__players.append(player)
-        return f"Player {player.get_name()} joined team {self.get_name()}"
+        return f"Player {player.name} joined team {self.name}"
 
     def remove_player(self, player_name):
         '''
@@ -53,8 +47,7 @@ class Team:
         •	If the player is not in the team, return "Player {player_name} not found"
         '''
         for player in self.__players:
-            if player.get_name() == player_name:
-                current_player = player
+            if player.name == player_name:
                 self.__players.remove(player)
-                return current_player
+                return player
         return f"Player {player_name} not found"
