@@ -1,12 +1,12 @@
 class Player:
 
     def __init__(self, name, endurance, sprint, dribble, passing, shooting):
-        self.__name = name
-        self.__endurance = endurance
-        self.__sprint = sprint
-        self.__dribble = dribble
-        self.__passing = passing
-        self.__shooting = shooting
+        self.name = name
+        self.endurance = endurance
+        self.sprint = sprint
+        self.dribble = dribble
+        self.passing = passing
+        self.shooting = shooting
 
     def __str__(self):
         return f"Player: {self.name}\nEndurance: {self.endurance}\nSprint: {self.sprint}\nDribble: {self.dribble}\nPassing: {self.passing}\nShooting: {self.shooting}\n"

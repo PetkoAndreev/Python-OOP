@@ -1,9 +1,9 @@
 class Team:
 
     def __init__(self, name, rating):
-        self.__name = name
-        self.__rating = rating
-        self.__players = []
+        self.name = name
+        self.rating = rating
+        self.players = []
 
     @property
     def name(self):
