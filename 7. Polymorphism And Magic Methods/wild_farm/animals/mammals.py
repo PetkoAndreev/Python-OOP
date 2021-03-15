@@ -10,7 +10,7 @@ class Mouse(Mammal):
         return "Squeak"
 
     def feed(self, food):
-        if not isinstance(food, Vegetable) and not isinstance(food, Meat):
+        if not isinstance(food, Vegetable) and not isinstance(food, Fruit):
             return f"{self.__class__.__name__} does not eat {food.__class__.__name__}!"
         self.get_weight_food_eaten(self.WEIGHT_INCREASE, food)
 
@@ -36,7 +36,7 @@ class Cat(Mammal):
         return "Meow"
 
     def feed(self, food):
-        if not isinstance(food, Vegetable) and not isinstance(food, Fruit):
+        if not isinstance(food, Vegetable) and not isinstance(food, Meat):
             return f"{self.__class__.__name__} does not eat {food.__class__.__name__}!"
         self.get_weight_food_eaten(self.WEIGHT_INCREASE, food)
 
