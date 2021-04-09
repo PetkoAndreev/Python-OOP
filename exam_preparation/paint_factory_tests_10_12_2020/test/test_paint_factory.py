@@ -54,8 +54,8 @@ class TestPaintFactory(unittest.TestCase):
     def test_remove_ingredient__when_ingredient_not_in_ingredients__expect_to_raise_exception(self):
         with self.assertRaises(KeyError) as ex:
             self.paint_factory.remove_ingredient('pink', 5)
-        expect = "No such ingredient in the factory"
-        # expect = "No such product in the factory"
+        expect = "No such ingredient in the factory" # Correct in Judge - Wrong in skeleton
+        # expect = "No such product in the factory" # Wrong in Judge - Correct in skeleton
         actual = str(ex.exception.args[0])
         self.assertEqual(expect, actual)
 
